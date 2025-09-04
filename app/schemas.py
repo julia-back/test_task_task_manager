@@ -22,3 +22,9 @@ class TaskCreateSchema(BaseModel):
     title: str
     description: str | None
     status: TaskStatusChoices = TaskStatusChoices.created
+
+
+class TaskUpdateSchema(BaseModel):
+    title: str | None
+    description: str | None
+    status: TaskStatusChoices | None
